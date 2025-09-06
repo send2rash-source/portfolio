@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Rashmi Singh - Senior Product Manager & Growth Strategist",
@@ -27,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased bg-gradient-to-br from-slate-50 via-white to-slate-100 min-h-screen">
+      <body className={`${poppins.variable} ${poppins.className} antialiased bg-gradient-to-br from-slate-50 via-white to-slate-100 min-h-screen`}>
         {children}
       </body>
     </html>

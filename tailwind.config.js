@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         'display': ['Playfair Display', 'serif'],
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+        'sans': ['var(--font-poppins)', 'ui-sans-serif', 'system-ui'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

@@ -45,7 +45,7 @@ const Hero = () => {
 
           {/* Name */}
           <div className={`mb-6 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-4">
+            <h1 className="text-5xl md:text-7xl font-sans font-bold mb-4">
               <span className="gradient-text animate-gradient">Rashmi Singh</span>
             </h1>
           </div>
