@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rashmi Singh - Senior Software Engineer & Tech Leader",
-  description: "Experienced Senior Software Engineer with 13+ years in full-stack development, cloud architecture, and team leadership. Specialized in Java, React, AWS, and modern web technologies.",
-  keywords: "Rashmi Singh, Software Engineer, Full Stack Developer, Java, React, AWS, Team Lead, Senior Engineer",
+  title: "Rashmi Singh - Senior Product Manager & Growth Strategist",
+  description: "Senior Product Manager with 13+ years of experience driving growth and building B2C, SaaS, and platform products. Specialized in customer acquisition, platform strategy, and user-centric problem-solving.",
+  keywords: "Rashmi Singh, Product Manager, Senior Product Manager, B2C Products, SaaS, Platform Strategy, Growth, Customer Acquisition",
   authors: [{ name: "Rashmi Singh" }],
   creator: "Rashmi Singh",
   openGraph: {
-    title: "Rashmi Singh - Senior Software Engineer & Tech Leader",
-    description: "Experienced Senior Software Engineer with 13+ years in full-stack development, cloud architecture, and team leadership.",
+    title: "Rashmi Singh - Senior Product Manager & Growth Strategist",
+    description: "Senior Product Manager with 13+ years of experience driving growth and building B2C, SaaS, and platform products.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rashmi Singh - Senior Software Engineer & Tech Leader",
-    description: "Experienced Senior Software Engineer with 13+ years in full-stack development, cloud architecture, and team leadership.",
+    title: "Rashmi Singh - Senior Product Manager & Growth Strategist",
+    description: "Senior Product Manager with 13+ years of experience driving growth and building B2C, SaaS, and platform products.",
   },
 };
 

@@ -268,8 +268,8 @@ const Projects = () => {
             <div className="bg-gradient-to-r from-gray-50 to-white p-8 rounded-2xl border">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Interested in My Work?</h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                I'm always excited to discuss new projects and opportunities. 
-                Let's connect and explore how we can build something amazing together.
+                I&apos;m always excited to discuss new projects and opportunities. 
+                Let&apos;s connect and explore how we can build something amazing together.
               </p>
               <a 
                 href="#contact" 
