@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CodeBracketIcon, UserGroupIcon, AcademicCapIcon, TrophyIcon } from '@heroicons/react/24/outline';
+import { ChartBarIcon, UserGroupIcon, AcademicCapIcon, TrophyIcon } from '@heroicons/react/24/outline';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,24 +26,24 @@ const About = () => {
 
   const highlights = [
     {
-      icon: CodeBracketIcon,
+      icon: ChartBarIcon,
       title: "13+ Years Experience",
-      description: "Full-stack development across multiple technologies and domains"
+      description: "Product management across B2C, SaaS, and platform products"
     },
     {
       icon: UserGroupIcon,
-      title: "Team Leadership",
-      description: "Led cross-functional teams and mentored junior developers"
+      title: "Cross-functional Leadership",
+      description: "Led teams across 5 countries and multiple business units"
     },
     {
       icon: AcademicCapIcon,
       title: "Continuous Learning",
-      description: "MBA + Computer Science background with ongoing certifications"
+      description: "MBA + Computer Science with Product Management certifications"
     },
     {
       icon: TrophyIcon,
-      title: "Proven Results",
-      description: "Delivered 50+ successful projects across startups to enterprises"
+      title: "Proven Impact",
+      description: "Driven 20% revenue growth and 30% conversion improvements"
     }
   ];
 
@@ -56,7 +56,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
               About <span className="gradient-text">Me</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -64,23 +64,23 @@ const About = () => {
             <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  I'm a passionate <span className="font-semibold text-purple-600">Senior Software Engineer</span> with over 
-                  <span className="font-semibold text-purple-600"> 13 years</span> of experience building innovative digital solutions. 
-                  My journey spans from startup environments to large enterprises, where I've consistently delivered 
-                  high-quality software that drives business growth.
+                  I&apos;m a passionate <span className="font-semibold text-blue-600">Senior Product Manager</span> with over 
+                  <span className="font-semibold text-blue-600"> 13 years</span> of experience driving growth and building 
+                  B2C, SaaS, and platform products. My journey spans across car-sharing, agritech, and retail sectors, 
+                  where I&apos;ve consistently delivered measurable business impact.
                 </p>
                 
                 <p>
                   Throughout my career at companies like <span className="font-semibold">BlueSG, Yara International, Falabella India, 
-                  ThoughtWorks, and Cognizant</span>, I've specialized in full-stack development, cloud architecture, 
-                  and team leadership. I'm particularly passionate about creating scalable solutions using modern technologies 
-                  like React, Java, AWS, and microservices architecture.
+                  ThoughtWorks, and Cognizant</span>, I&apos;ve specialized in customer acquisition, platform strategy, and 
+                  user-centric problem-solving. I&apos;ve built and scaled products for customers across US, Latin America, 
+                  Asia, and East Africa, driving significant revenue growth and conversion improvements.
                 </p>
                 
                 <p>
-                  What drives me is the opportunity to solve complex problems through elegant code and mentor the next 
-                  generation of developers. I believe in continuous learning and staying at the forefront of technology 
-                  trends to deliver exceptional results.
+                  What drives me is the opportunity to create products that solve real user problems and deliver measurable 
+                  business outcomes. I believe in data-informed decision making and bringing together cross-functional teams 
+                  to build exceptional products that delight customers.
                 </p>
 
                 <div className="pt-4">
@@ -88,7 +88,7 @@ const About = () => {
                     href="#contact" 
                     className="btn-primary hover-lift inline-flex items-center space-x-2"
                   >
-                    <span>Let's Connect</span>
+                    <span>Let&apos;s Connect</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -108,7 +108,7 @@ const About = () => {
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl flex items-center justify-center">
                           <highlight.icon className="w-6 h-6 text-white" />
                         </div>
                       </div>
@@ -129,23 +129,23 @@ const About = () => {
 
           {/* Stats Section */}
           <div className={`mt-20 transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12">
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-3xl p-8 md:p-12">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">13+</div>
-                  <div className="text-purple-100">Years of Experience</div>
+                  <div className="text-blue-100">Years of Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
-                  <div className="text-purple-100">Projects Completed</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">400K+</div>
+                  <div className="text-blue-100">Users Impacted</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">8</div>
-                  <div className="text-purple-100">Companies Served</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">5</div>
+                  <div className="text-blue-100">Countries Served</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">25+</div>
-                  <div className="text-purple-100">Technologies Mastered</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">30%</div>
+                  <div className="text-blue-100">Conversion Growth</div>
                 </div>
               </div>
             </div>

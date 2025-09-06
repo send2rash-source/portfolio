@@ -1,7 +1,14 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CodeBracketIcon, CloudIcon, CpuChipIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import { 
+  ChartBarIcon, 
+  UserGroupIcon, 
+  CogIcon, 
+  LightBulbIcon,
+  PresentationChartLineIcon,
+  CurrencyDollarIcon
+} from '@heroicons/react/24/outline';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,55 +34,55 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      icon: CodeBracketIcon,
-      title: "Programming Languages",
+      icon: ChartBarIcon,
+      title: "Product Management",
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "Java", level: 95, years: "10+ years" },
-        { name: "JavaScript/TypeScript", level: 90, years: "8+ years" },
-        { name: "Python", level: 85, years: "5+ years" },
-        { name: "SQL", level: 90, years: "10+ years" },
-        { name: "HTML/CSS", level: 95, years: "10+ years" },
-        { name: "C++", level: 75, years: "3+ years" }
+        { name: "Product Strategy", level: 95, years: "10+ years" },
+        { name: "Roadmap Planning", level: 90, years: "10+ years" },
+        { name: "User Research", level: 85, years: "8+ years" },
+        { name: "A/B Testing", level: 88, years: "7+ years" },
+        { name: "Product Analytics", level: 92, years: "8+ years" },
+        { name: "Stakeholder Management", level: 95, years: "10+ years" }
       ]
     },
     {
-      icon: WrenchScrewdriverIcon,
-      title: "Frameworks & Libraries",
+      icon: CurrencyDollarIcon,
+      title: "Business & Growth",
       color: "from-green-500 to-teal-500",
       skills: [
-        { name: "React.js", level: 95, years: "6+ years" },
-        { name: "Spring Boot", level: 90, years: "8+ years" },
-        { name: "Node.js", level: 85, years: "5+ years" },
-        { name: "Angular", level: 80, years: "4+ years" },
-        { name: "Express.js", level: 85, years: "4+ years" },
-        { name: "Next.js", level: 80, years: "3+ years" }
+        { name: "Revenue Growth", level: 90, years: "8+ years" },
+        { name: "Customer Acquisition", level: 92, years: "7+ years" },
+        { name: "Conversion Optimization", level: 88, years: "6+ years" },
+        { name: "Market Analysis", level: 85, years: "8+ years" },
+        { name: "Pricing Strategy", level: 87, years: "5+ years" },
+        { name: "Go-to-Market Strategy", level: 90, years: "7+ years" }
       ]
     },
     {
-      icon: CloudIcon,
-      title: "Cloud & DevOps",
-      color: "from-purple-500 to-pink-500",
+      icon: UserGroupIcon,
+      title: "Leadership & Operations",
+      color: "from-blue-500 to-teal-500",
       skills: [
-        { name: "AWS", level: 90, years: "6+ years" },
-        { name: "Docker", level: 85, years: "5+ years" },
-        { name: "Kubernetes", level: 80, years: "3+ years" },
-        { name: "Jenkins", level: 85, years: "5+ years" },
-        { name: "Terraform", level: 75, years: "2+ years" },
-        { name: "CI/CD", level: 90, years: "6+ years" }
+        { name: "Team Leadership", level: 92, years: "8+ years" },
+        { name: "Cross-functional Collaboration", level: 95, years: "10+ years" },
+        { name: "Digital Strategy", level: 90, years: "8+ years" },
+        { name: "Operations Management", level: 88, years: "7+ years" },
+        { name: "Product Operations", level: 90, years: "8+ years" },
+        { name: "Agile/Scrum", level: 90, years: "8+ years" }
       ]
     },
     {
-      icon: CpuChipIcon,
-      title: "Databases & Tools",
+      icon: LightBulbIcon,
+      title: "Domain Expertise",
       color: "from-orange-500 to-red-500",
       skills: [
-        { name: "PostgreSQL", level: 90, years: "8+ years" },
-        { name: "MySQL", level: 90, years: "10+ years" },
-        { name: "MongoDB", level: 85, years: "5+ years" },
-        { name: "Redis", level: 80, years: "4+ years" },
-        { name: "Git", level: 95, years: "10+ years" },
-        { name: "Microservices", level: 90, years: "6+ years" }
+        { name: "E-commerce/Retail", level: 95, years: "8+ years" },
+        { name: "SaaS Platforms", level: 88, years: "6+ years" },
+        { name: "Mobility/Car-sharing", level: 85, years: "2+ years" },
+        { name: "AgriTech", level: 82, years: "1+ year" },
+        { name: "B2C Products", level: 92, years: "10+ years" },
+        { name: "Subscription Business", level: 90, years: "3+ years" }
       ]
     }
   ];
@@ -87,12 +94,12 @@ const Skills = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Technical <span className="gradient-text">Skills</span>
+              Skills & <span className="gradient-text">Expertise</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expertise across the full technology stack with deep knowledge in modern development practices
+              Comprehensive product management expertise with proven ability to drive growth and deliver user-centric solutions
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mt-6"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full mt-6"></div>
           </div>
 
           <div className="grid lg:grid-cols-12 gap-8">
@@ -116,7 +123,7 @@ const Skills = () => {
                         <div className={`text-sm ${
                           activeCategory === index ? 'text-white/80' : 'text-gray-500'
                         }`}>
-                          {category.skills.length} technologies
+                          {category.skills.length} competencies
                         </div>
                       </div>
                     </div>
@@ -180,13 +187,13 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Additional Skills Overview */}
+          {/* Core Competencies */}
           <div className={`mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-white mb-4">Core Competencies</h3>
                 <p className="text-gray-300 max-w-2xl mx-auto">
-                  Beyond technical skills, I bring strong leadership, problem-solving, and communication abilities
+                  Beyond product skills, I bring strong analytical thinking, user empathy, and business acumen
                 </p>
               </div>
               
@@ -194,31 +201,31 @@ const Skills = () => {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Innovation</h4>
-                  <p className="text-gray-300">Always exploring new technologies and methodologies</p>
+                  <h4 className="text-xl font-semibold text-white mb-2">Data-Informed</h4>
+                  <p className="text-gray-300">Making decisions based on metrics and user insights</p>
                 </div>
                 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Leadership</h4>
-                  <p className="text-gray-300">Leading teams and mentoring junior developers</p>
+                  <h4 className="text-xl font-semibold text-white mb-2">User-Centric</h4>
+                  <p className="text-gray-300">Focused on solving real user problems effectively</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Performance</h4>
-                  <p className="text-gray-300">Optimizing applications for speed and scalability</p>
+                  <h4 className="text-xl font-semibold text-white mb-2">Growth-Oriented</h4>
+                  <p className="text-gray-300">Driving measurable business outcomes and revenue</p>
                 </div>
               </div>
             </div>

@@ -8,11 +8,11 @@ const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   
   const roles = [
-    "Senior Software Engineer",
-    "Full Stack Developer",
-    "Tech Team Leader",
-    "Cloud Architect",
-    "Problem Solver"
+    "Senior Product Manager",
+    "Growth & Platform Strategy",
+    "B2C & SaaS Platforms",
+    "Product Strategist",
+    "Data Informed Leader"
   ];
 
   useEffect(() => {
@@ -21,13 +21,13 @@ const Hero = () => {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="absolute top-40 right-20 w-64 h-64 bg-gradient-to-r from-yellow-400 to-red-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-20 left-40 w-80 h-80 bg-gradient-to-r from-green-400 to-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
@@ -37,19 +37,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {/* Profile Image */}
-          <div className="mb-8 relative inline-block">
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1 animate-pulse-slow">
-              <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
-                RS
-              </div>
-            </div>
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-20 animate-pulse-slow"></div>
-          </div>
 
           {/* Greeting */}
           <div className={`mb-4 transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <p className="text-lg text-gray-600 mb-2">👋 Hello, I'm</p>
+            <p className="text-lg text-gray-600 mb-2">👋 Hello, I&apos;m</p>
           </div>
 
           {/* Name */}
@@ -73,9 +64,9 @@ const Hero = () => {
           {/* Description */}
           <div className={`mb-12 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Passionate software engineer with <span className="font-semibold text-purple-600">13+ years</span> of experience 
-              building scalable applications and leading high-performing teams. 
-              Specialized in full-stack development, cloud architecture, and modern web technologies.
+              Senior Product Manager with <span className="font-semibold text-blue-600">13+ years</span> of experience 
+              driving growth and building B2C, SaaS, and platform products across car-sharing, agritech, and retail. 
+              Proven success delivering growth, platform strategy, and user-centric problem-solving.
             </p>
           </div>
 
@@ -87,12 +78,12 @@ const Hero = () => {
                 <div className="text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">50+</div>
-                <div className="text-gray-600">Projects Delivered</div>
+                <div className="text-3xl font-bold gradient-text">5</div>
+                <div className="text-gray-600">Countries Impacted</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">10+</div>
-                <div className="text-gray-600">Team Members Led</div>
+                <div className="text-3xl font-bold gradient-text">20%</div>
+                <div className="text-gray-600">Revenue Driven</div>
               </div>
             </div>
           </div>
@@ -111,7 +102,7 @@ const Hero = () => {
               </a>
               <a 
                 href="#experience" 
-                className="btn-outline gradient-text hover-lift inline-flex items-center space-x-2"
+                className="btn-outline hover-lift inline-flex items-center space-x-2"
               >
                 <span>View My Work</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

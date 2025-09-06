@@ -21,7 +21,6 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -60,10 +59,10 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(item.href); }}
-                className="relative text-gray-700 hover:text-purple-600 transition-colors duration-300 font-medium group"
+                className="relative text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-teal-500 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <a
@@ -71,7 +70,7 @@ const Header = () => {
               onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
               className="btn-primary text-sm hover-lift"
             >
-              Let's Talk
+              Let&apos;s Talk
             </a>
           </div>
 
@@ -98,7 +97,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(item.href); }}
-                className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-300"
+                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300"
               >
                 {item.name}
               </a>
@@ -109,7 +108,7 @@ const Header = () => {
                 onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
                 className="btn-primary w-full text-center block"
               >
-                Let's Talk
+                Let&apos;s Talk
               </a>
             </div>
           </div>

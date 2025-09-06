@@ -16,9 +16,8 @@ const Footer = () => {
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
-    { name: 'Certifications', href: '#certifications' }
+    { name: 'Contact', href: '#contact' }
   ];
 
   const socialLinks = [
@@ -39,7 +38,7 @@ const Footer = () => {
     },
     {
       name: 'Email',
-      href: 'mailto:rashmi.singh@email.com',
+      href: 'mailto:singh.rashmi2509@gmail.com',
       icon: 'email'
     }
   ];
@@ -90,7 +89,7 @@ const Footer = () => {
       </div>
       
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-teal-500"></div>
       
       <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-12">
@@ -101,9 +100,9 @@ const Footer = () => {
                 Rashmi Singh
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-md">
-                Senior Software Engineer passionate about building scalable solutions 
-                and leading high-performing teams. Always excited to take on new challenges 
-                and create impactful technology.
+                Senior Product Manager with 13+ years of experience driving growth 
+                and building B2C, SaaS, and platform products across multiple industries. 
+                Passionate about user-centric problem-solving and measurable business impact.
               </p>
             </div>
             
@@ -152,19 +151,19 @@ const Footer = () => {
               <div>
                 <div className="text-sm text-gray-400 mb-1">Email</div>
                 <a 
-                  href="mailto:rashmi.singh@email.com" 
+                  href="mailto:singh.rashmi2509@gmail.com" 
                   className="hover:text-white transition-colors duration-300"
                 >
-                  rashmi.singh@email.com
+                  singh.rashmi2509@gmail.com
                 </a>
               </div>
               <div>
                 <div className="text-sm text-gray-400 mb-1">Phone</div>
                 <a 
-                  href="tel:+6591234567" 
+                  href="tel:+6584244227" 
                   className="hover:text-white transition-colors duration-300"
                 >
-                  +65 9123 4567
+                  +65 8424 4227
                 </a>
               </div>
               <div>

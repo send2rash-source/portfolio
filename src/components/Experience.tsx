@@ -28,216 +28,178 @@ const Experience = () => {
   const experiences = [
     {
       company: "BlueSG",
-      role: "Senior Software Engineer",
-      period: "Nov 2023 - Present",
+      role: "Senior Product Manager",
+      period: "Dec 2023 - Present",
       location: "Singapore",
-      type: "Full-time",
-      description: "Leading full-stack development for electric vehicle sharing platform, focusing on scalable microservices architecture and cloud solutions.",
+      type: "Car-sharing subscription service",
+      description: "Led end-to-end strategy and execution for customer acquisition and engagement through subscription, onboarding, and voucher products.",
       achievements: [
-        "Architected and developed microservices using Spring Boot and React",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Led team of 5 engineers in delivering critical platform features",
-        "Optimized system performance resulting in 40% faster response times"
+        "Responsible for 20% of company revenue driven through customer subscriptions",
+        "Introduction of free-tier subscription achieving +30% sign-up conversion",
+        "Sign-up flow optimizations resulting in +15% sign-up conversion",
+        "Improved Singpass integration reducing time-to-signup by 46%",
+        "Built subscription lifecycle and billing systems with 95% collectible success rate via automated enforcement flows"
       ],
-      technologies: ["Java", "Spring Boot", "React", "AWS", "Docker", "Kubernetes"]
+      technologies: ["Growth Strategy", "Customer Acquisition", "Subscription Models", "Revenue Optimization", "Platform Strategy"]
     },
     {
-      company: "Yara International",
-      role: "Senior Software Engineer",
-      period: "Jun 2022 - Oct 2023",
-      location: "Bengaluru, Karnataka, India",
-      type: "Full-time",
-      description: "Developed agricultural technology solutions and digital farming platforms for global markets.",
+      company: "Yara",
+      role: "Senior Product Owner",
+      period: "Mar 2023 - Sep 2023",
+      location: "Singapore",
+      type: "Agritech platform for smallholder farmers",
+      description: "Led strategic product enhancements for a farmer-facing app used by ~400,000 farmers across India, Southeast Asia, and East Africa.",
       achievements: [
-        "Built scalable web applications serving 10,000+ farmers globally",
-        "Implemented real-time data analytics for crop monitoring systems",
-        "Collaborated with cross-functional teams across multiple time zones",
-        "Mentored junior developers and established coding best practices"
+        "Introduced guest browse and lean onboarding flows (+22% registration, -60% clicks to home)",
+        "Enabled USSD-based registration and ordering for 4,000+ non-smartphone users",
+        "Introduced crop-based navigation and ordering flow optimisations",
+        "Achieved -30% time-to-first-purchase, +9% basket size, and +14% cart conversion",
+        "Launched input finance product in partnership with banks"
       ],
-      technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS", "MongoDB"]
+      technologies: ["Product Strategy", "User Experience", "Mobile Apps", "AgriTech", "Financial Services"]
     },
     {
-      company: "Falabella India",
-      role: "Senior Software Engineer",
-      period: "Apr 2021 - Jun 2022",
-      location: "Bengaluru, Karnataka, India",
-      type: "Full-time",
-      description: "Developed e-commerce solutions and retail technology platforms for Latin American markets.",
+      company: "Falabella / ThoughtWorks",
+      role: "Product Manager",
+      period: "Sep 2019 - Mar 2023",
+      location: "India & Chile",
+      type: "Omnichannel promotions platform",
+      description: "Led strategy and delivery of a self-serve promotions platform for Latin America's largest retailer to scale real-time campaign execution across countries, businesses, and sales channels.",
       achievements: [
-        "Led development of order management system handling 100k+ daily transactions",
-        "Implemented payment gateway integrations with multiple providers",
-        "Optimized database queries reducing page load times by 50%",
-        "Established automated testing framework improving code coverage to 85%"
+        "Scaled platform to support 5 countries, 4 businesses, and all channels",
+        "Replaced legacy tools enabling 1.5× more promotions post-launch",
+        "Reduced engineering dependency for promo setup by 60%, accelerating time-to-launch",
+        "Automated onboarding of 2,000+ daily store promotions to increase in-store adoption",
+        "Supported 65% of peak campaign orders with at least one promotion applied",
+        "Setup dashboards to evaluate promotion effectiveness and guide campaign strategy"
       ],
-      technologies: ["Java", "Spring Framework", "Angular", "MySQL", "Redis", "Microservices"]
-    },
-    {
-      company: "ThoughtWorks",
-      role: "Senior Consultant Developer",
-      period: "Aug 2019 - Mar 2021",
-      location: "Bengaluru, Karnataka, India",
-      type: "Full-time",
-      description: "Consulted for multiple clients delivering custom software solutions and digital transformation projects.",
-      achievements: [
-        "Delivered 5+ client projects with 100% on-time completion rate",
-        "Implemented DevOps practices reducing deployment cycles from weeks to hours",
-        "Led technical workshops and knowledge sharing sessions",
-        "Contributed to open-source projects and community initiatives"
-      ],
-      technologies: ["Java", "React", "Docker", "Jenkins", "AWS", "Terraform"]
+      technologies: ["E-commerce", "Promotions Platform", "Multi-country Operations", "Retail Tech", "Data Analytics"]
     },
     {
       company: "Cognizant",
-      role: "Senior Associate / Team Lead",
-      period: "Jul 2011 - Jul 2019",
-      location: "Chennai, Tamil Nadu, India",
-      type: "Full-time",
-      description: "Progressed through multiple roles from Associate to Team Lead, delivering enterprise solutions for Fortune 500 clients.",
+      role: "Associate Product Owner",
+      period: "Jul 2016 - May 2019",
+      location: "India/Nepal",
+      type: "Retail merchandising & planning suite",
+      description: "Led roadmap and delivery for Softvision Suite, a platform supporting end-to-end merchandise planning for large US retailers.",
       achievements: [
-        "Led team of 12 developers across multiple client engagements",
-        "Delivered 15+ enterprise applications with zero critical production issues",
-        "Established center of excellence for modern web development practices",
-        "Achieved 95% client satisfaction score across all managed projects"
+        "Delivered plan-to-sell workflows for multi-store retailers, including one with 1,000+ stores",
+        "Managed 3 agile teams and 4-6 analysts across India and Nepal",
+        "Reduced operating costs by 50% by establishing and scaling a Nepal delivery center",
+        "Prioritized and shipped high-impact releases through structured roadmap and stakeholder alignment",
+        "Mentored business analysts and converted epics to well-defined stories with edge-case coverage"
       ],
-      technologies: ["Java", "J2EE", "Spring", "Hibernate", "Oracle", "JavaScript", "jQuery"]
+      technologies: ["Product Management", "Retail Systems", "Team Leadership", "Agile", "Cost Optimization"]
+    },
+    {
+      company: "Cognizant",
+      role: "Business Analyst → Lead Business Analyst",
+      period: "Mar 2012 - Jun 2016",
+      location: "India",
+      type: "Assortment planning & vendor collaboration systems",
+      description: "Contributed to end-to-end product delivery across multiple merchandising tools used by top North American retailers.",
+      achievements: [
+        "Enhanced assortment, purchasing, and allocation modules across 7 retail clients",
+        "Implemented merchandise financial planning workflows to track plan vs actuals",
+        "Delivered dashboards to monitor product health and measure KPIs across sprints",
+        "Launched configurable vendor contract management platform to streamline retailer-vendor collaboration",
+        "Reduced manual overhead in allowance tracking and approvals"
+      ],
+      technologies: ["Business Analysis", "Merchandising Systems", "Vendor Management", "Dashboard Analytics", "Process Automation"]
     }
   ];
 
   return (
-    <section id="experience" ref={sectionRef} className="section-padding bg-white">
+    <section id="experience" ref={sectionRef} className="section-padding">
       <div className="container mx-auto px-6">
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              My <span className="gradient-text">Experience</span>
+              Work <span className="gradient-text">Experience</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A journey through innovative companies and transformative projects
-            </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mt-6"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-8">
-            {/* Company List - Left Side */}
-            <div className="lg:col-span-4">
-              <div className="space-y-2 sticky top-32">
+          {/* Experience Timeline */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Company List */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-24">
                 {experiences.map((exp, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedExperience(index)}
-                    className={`w-full text-left p-4 rounded-xl transition-all duration-300 ${
+                    className={`w-full text-left p-4 rounded-xl mb-3 transition-all duration-300 ${
                       selectedExperience === index
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                        : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
+                        ? 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg'
+                        : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
                     }`}
                   >
-                    <div className="flex items-center space-x-3">
-                      <BuildingOfficeIcon className="w-5 h-5 flex-shrink-0" />
-                      <div className="min-w-0 flex-1">
-                        <div className="font-semibold truncate">{exp.company}</div>
-                        <div className={`text-sm truncate ${
-                          selectedExperience === index ? 'text-purple-100' : 'text-gray-500'
-                        }`}>
-                          {exp.role}
-                        </div>
-                      </div>
+                    <div className="font-semibold text-lg">{exp.company}</div>
+                    <div className={`text-sm ${selectedExperience === index ? 'text-blue-100' : 'text-gray-500'}`}>
+                      {exp.period}
                     </div>
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Experience Details - Right Side */}
-            <div className="lg:col-span-8">
-              <div className={`transition-all duration-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-                {experiences.map((exp, index) => (
-                  <div
-                    key={index}
-                    className={`transition-all duration-300 ${
-                      selectedExperience === index ? 'block' : 'hidden'
-                    }`}
-                  >
-                    <div className="card-modern p-8 rounded-2xl">
-                      {/* Company Header */}
-                      <div className="mb-6">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2">{exp.role}</h3>
-                        <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
-                          <div className="flex items-center space-x-2">
-                            <BuildingOfficeIcon className="w-4 h-4" />
-                            <span className="font-medium">{exp.company}</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <CalendarIcon className="w-4 h-4" />
-                            <span>{exp.period}</span>
-                          </div>
-                          <div className="flex items-center space-x-2">
-                            <MapPinIcon className="w-4 h-4" />
-                            <span>{exp.location}</span>
-                          </div>
-                        </div>
-                        <p className="text-gray-700 leading-relaxed">{exp.description}</p>
-                      </div>
-
-                      {/* Key Achievements */}
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-800 mb-4">Key Achievements</h4>
-                        <ul className="space-y-3">
-                          {exp.achievements.map((achievement, achIndex) => (
-                            <li key={achIndex} className="flex items-start space-x-3">
-                              <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-gray-700">{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Technologies */}
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-800 mb-4">Technologies Used</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {exp.technologies.map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-full text-sm font-medium"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+            {/* Experience Details */}
+            <div className="lg:col-span-2">
+              <div className="card-modern p-8 rounded-2xl">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {experiences[selectedExperience].role}
+                  </h3>
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-2">
+                      <BuildingOfficeIcon className="w-4 h-4" />
+                      <span>{experiences[selectedExperience].company}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CalendarIcon className="w-4 h-4" />
+                      <span>{experiences[selectedExperience].period}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPinIcon className="w-4 h-4" />
+                      <span>{experiences[selectedExperience].location}</span>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Timeline Visual */}
-          <div className="mt-16">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-800">Career Timeline</h3>
-            </div>
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 to-pink-500 h-full rounded-full"></div>
-              <div className="space-y-12">
-                {experiences.map((exp, index) => (
-                  <div
-                    key={index}
-                    className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                  >
-                    <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                      <div className="bg-white p-4 rounded-xl shadow-md hover-lift">
-                        <h4 className="font-semibold text-gray-800">{exp.company}</h4>
-                        <p className="text-sm text-gray-600">{exp.period}</p>
-                      </div>
-                    </div>
-                    <div className="w-2/12 flex justify-center">
-                      <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-4 border-white shadow-lg"></div>
-                    </div>
-                    <div className="w-5/12"></div>
+                  <div className="mt-2 text-sm text-blue-600 font-medium">
+                    {experiences[selectedExperience].type}
                   </div>
-                ))}
+                </div>
+
+                <p className="text-gray-700 mb-6">
+                  {experiences[selectedExperience].description}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Key Achievements:</h4>
+                  <ul className="space-y-2">
+                    {experiences[selectedExperience].achievements.map((achievement, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="text-blue-600 mt-1">▸</span>
+                        <span className="text-gray-700">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-3">Key Skills & Areas:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {experiences[selectedExperience].technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-gradient-to-r from-blue-100 to-teal-100 text-blue-700 rounded-full text-sm font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

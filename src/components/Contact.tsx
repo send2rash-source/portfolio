@@ -1,17 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,44 +24,19 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      alert('Thank you for your message! I will get back to you soon.');
-    }, 2000);
-  };
-
   const contactInfo = [
     {
       icon: EnvelopeIcon,
       label: "Email",
-      value: "rashmi.singh@email.com",
-      href: "mailto:rashmi.singh@email.com",
-      color: "from-purple-500 to-pink-500"
+      value: "singh.rashmi2509@gmail.com",
+      href: "mailto:singh.rashmi2509@gmail.com",
+      color: "from-blue-500 to-teal-500"
     },
     {
       icon: PhoneIcon,
       label: "Phone",
-      value: "+65 9123 4567",
-      href: "tel:+6591234567",
+      value: "+65 8424 4227",
+      href: "tel:+6584244227",
       color: "from-green-500 to-teal-500"
     },
     {
@@ -83,21 +51,9 @@ const Contact = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/rashmi-singh/",
+      href: "https://www.linkedin.com/in/rashmi-singh",
       icon: "linkedin",
       color: "hover:text-blue-600"
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: "github",
-      color: "hover:text-gray-800"
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: "twitter",
-      color: "hover:text-blue-400"
     }
   ];
 
@@ -133,24 +89,23 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
-              Let's <span className="gradient-text">Connect</span>
+              Let&apos;s <span className="gradient-text">Connect</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to collaborate on your next project? I'd love to hear from you. 
-              Let's discuss how we can build something amazing together.
+              Ready to collaborate on your next project? I&apos;d love to hear from you. 
+              Let&apos;s discuss how we can build something amazing together.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mt-6"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full mt-6"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
-            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
                   <p className="text-gray-300 leading-relaxed mb-8">
-                    I'm always open to discussing new opportunities, interesting projects, 
-                    or just having a conversation about technology and software development. 
+                    I&apos;m always open to discussing new product opportunities, interesting challenges, 
+                    or just having a conversation about product management and growth strategies. 
                     Feel free to reach out through any of the channels below.
                   </p>
                 </div>
@@ -199,103 +154,12 @@ const Contact = () => {
                     <span className="text-green-400 font-medium">Available for New Projects</span>
                   </div>
                   <p className="text-gray-300 text-sm mt-2">
-                    Currently open to freelance opportunities and full-time positions
+                    Currently open to product management roles and consulting opportunities
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all duration-300"
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all duration-300"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all duration-300"
-                      placeholder="Project Discussion"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all duration-300 resize-none"
-                      placeholder="Tell me about your project or what you'd like to discuss..."
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                        <span>Sending...</span>
-                      </>
-                    ) : (
-                      <>
-                        <PaperAirplaneIcon className="w-5 h-5" />
-                        <span>Send Message</span>
-                      </>
-                    )}
-                  </button>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
       </div>

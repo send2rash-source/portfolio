@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CertificateIcon, CalendarIcon, CheckBadgeIcon } from '@heroicons/react/24/outline';
+import { AcademicCapIcon, CalendarIcon, CheckBadgeIcon } from '@heroicons/react/24/outline';
 
 const Certifications = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,88 +27,38 @@ const Certifications = () => {
 
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect - Professional",
-      issuer: "Amazon Web Services",
-      category: "Cloud",
+      title: "Product Management: Building a Product Roadmap",
+      issuer: "LinkedIn Learning",
+      category: "Product",
       date: "2023",
       status: "Active",
-      description: "Advanced certification demonstrating expertise in designing distributed systems on AWS.",
-      skills: ["AWS", "Cloud Architecture", "System Design", "Security"],
-      credentialId: "AWS-CSA-PRO-2023"
+      description: "Certification in strategic product roadmap development and prioritization frameworks.",
+      skills: ["Product Strategy", "Roadmapping", "Prioritization", "Stakeholder Management"],
+      credentialId: "LI-PM-ROADMAP-2023"
     },
     {
-      title: "Certified Kubernetes Administrator (CKA)",
-      issuer: "Cloud Native Computing Foundation",
-      category: "DevOps",
-      date: "2022",
+      title: "Product Management: Building a Product Roadmap",
+      issuer: "Coursera",
+      category: "Product",
+      date: "2023",
       status: "Active",
-      description: "Demonstrates the ability to work as a Kubernetes administrator in a production environment.",
-      skills: ["Kubernetes", "Container Orchestration", "DevOps", "Linux"],
-      credentialId: "CKA-2022-RAS"
+      description: "Advanced certification in product roadmap planning and execution strategies.",
+      skills: ["Product Planning", "Strategic Thinking", "Feature Prioritization", "OKRs"],
+      credentialId: "COURSERA-PM-2023"
     },
     {
-      title: "Oracle Certified Professional, Java SE Developer",
-      issuer: "Oracle",
+      title: "Python Programming",
+      issuer: "Python Institute",
       category: "Programming",
-      date: "2021",
-      status: "Active",
-      description: "Professional-level certification in Java SE development and enterprise programming.",
-      skills: ["Java", "Spring Framework", "Enterprise Development", "Design Patterns"],
-      credentialId: "OCP-JAVA-2021"
-    },
-    {
-      title: "Certified ScrumMaster (CSM)",
-      issuer: "Scrum Alliance",
-      category: "Agile",
-      date: "2020",
-      status: "Active",
-      description: "Professional certification in Scrum methodology and agile project management.",
-      skills: ["Scrum", "Agile", "Project Management", "Team Leadership"],
-      credentialId: "CSM-2020-RS"
-    },
-    {
-      title: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      category: "Cloud",
-      date: "2020",
-      status: "Active",
-      description: "Demonstrates expertise in developing and maintaining applications on AWS platform.",
-      skills: ["AWS", "Serverless", "DynamoDB", "Lambda"],
-      credentialId: "AWS-DEV-2020"
-    },
-    {
-      title: "MongoDB Certified Developer",
-      issuer: "MongoDB Inc.",
-      category: "Database",
-      date: "2019",
-      status: "Active",
-      description: "Certification in MongoDB development and database design patterns.",
-      skills: ["MongoDB", "NoSQL", "Database Design", "Aggregation"],
-      credentialId: "MDB-DEV-2019"
-    },
-    {
-      title: "Google Cloud Professional Cloud Architect",
-      issuer: "Google Cloud",
-      category: "Cloud",
-      date: "2021",
-      status: "Active",
-      description: "Professional certification in Google Cloud Platform architecture and design.",
-      skills: ["Google Cloud", "Microservices", "System Design", "Security"],
-      credentialId: "GCP-PCA-2021"
-    },
-    {
-      title: "React Developer Certification",
-      issuer: "Meta",
-      category: "Frontend",
       date: "2022",
       status: "Active",
-      description: "Professional certification in React development and modern frontend practices.",
-      skills: ["React", "JavaScript", "Frontend Development", "State Management"],
-      credentialId: "META-REACT-2022"
+      description: "Professional certification in Python programming for data analysis and automation.",
+      skills: ["Python", "Data Analysis", "Automation", "Scripting"],
+      credentialId: "PY-PROG-2022"
     }
   ];
 
-  const categories = ['All', 'Cloud', 'DevOps', 'Programming', 'Database', 'Frontend', 'Agile'];
+  const categories = ['All', 'Product', 'Programming'];
 
   const filteredCertifications = selectedCategory === 'All' 
     ? certifications 
@@ -116,24 +66,16 @@ const Certifications = () => {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      'Cloud': 'from-blue-500 to-cyan-500',
-      'DevOps': 'from-green-500 to-teal-500',
-      'Programming': 'from-purple-500 to-pink-500',
-      'Database': 'from-orange-500 to-red-500',
-      'Frontend': 'from-indigo-500 to-purple-500',
-      'Agile': 'from-yellow-500 to-orange-500'
+      'Product': 'from-blue-500 to-cyan-500',
+      'Programming': 'from-purple-500 to-pink-500'
     };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   };
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Cloud': return '☁️';
-      case 'DevOps': return '⚙️';
+      case 'Product': return '📊';
       case 'Programming': return '💻';
-      case 'Database': return '🗄️';
-      case 'Frontend': return '🎨';
-      case 'Agile': return '🔄';
       default: return '📜';
     }
   };
@@ -244,12 +186,12 @@ const Certifications = () => {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">8+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">3</div>
                   <div className="text-purple-100">Active Certifications</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">6</div>
-                  <div className="text-purple-100">Technology Domains</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">2</div>
+                  <div className="text-purple-100">Skill Domains</div>
                 </div>
                 <div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">100%</div>
@@ -268,25 +210,25 @@ const Certifications = () => {
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Continuous Learning</h3>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                Currently pursuing additional certifications in AI/ML, advanced cloud architecture, 
-                and emerging technologies to stay at the forefront of software engineering.
+                Currently pursuing additional certifications in advanced product management, 
+                data analytics, and emerging business strategies to stay at the forefront of product innovation.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white p-6 rounded-xl shadow-md text-center">
+                  <div className="text-3xl mb-3">📈</div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Growth Strategy</h4>
+                  <p className="text-sm text-gray-600">Advanced growth hacking and revenue optimization</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md text-center">
+                  <div className="text-3xl mb-3">📊</div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Data Analytics</h4>
+                  <p className="text-sm text-gray-600">Advanced analytics for product decision making</p>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-md text-center">
                   <div className="text-3xl mb-3">🤖</div>
-                  <h4 className="font-semibold text-gray-800 mb-2">AI/ML Engineering</h4>
-                  <p className="text-sm text-gray-600">Machine Learning and AI application development</p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-md text-center">
-                  <div className="text-3xl mb-3">🏗️</div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Solution Architecture</h4>
-                  <p className="text-sm text-gray-600">Advanced system design and enterprise architecture</p>
-                </div>
-                <div className="bg-white p-6 rounded-xl shadow-md text-center">
-                  <div className="text-3xl mb-3">🚀</div>
-                  <h4 className="font-semibold text-gray-800 mb-2">Emerging Technologies</h4>
-                  <p className="text-sm text-gray-600">Blockchain, IoT, and next-gen development tools</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">AI Product Management</h4>
+                  <p className="text-sm text-gray-600">Building and managing AI-powered products</p>
                 </div>
               </div>
             </div>
