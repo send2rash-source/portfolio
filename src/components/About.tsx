@@ -1,68 +1,151 @@
-export default function About() {
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import { CodeBracketIcon, UserGroupIcon, AcademicCapIcon, TrophyIcon } from '@heroicons/react/24/outline';
+
+const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const highlights = [
+    {
+      icon: CodeBracketIcon,
+      title: "13+ Years Experience",
+      description: "Full-stack development across multiple technologies and domains"
+    },
+    {
+      icon: UserGroupIcon,
+      title: "Team Leadership",
+      description: "Led cross-functional teams and mentored junior developers"
+    },
+    {
+      icon: AcademicCapIcon,
+      title: "Continuous Learning",
+      description: "MBA + Computer Science background with ongoing certifications"
+    },
+    {
+      icon: TrophyIcon,
+      title: "Proven Results",
+      description: "Delivered 50+ successful projects across startups to enterprises"
+    }
+  ];
+
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-white to-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-slate-800">About</span> <span className="gradient-text">Me</span>
-          </h2>
-          <div className="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
-        </div>
-        
-        <div className="max-w-5xl mx-auto">
+    <section id="about" ref={sectionRef} className="section-padding bg-gradient-to-br from-gray-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+              About <span className="gradient-text">Me</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <p className="text-lg text-slate-600 leading-relaxed">
-                I'm a Senior Product Manager with <span className="font-semibold text-indigo-600">13+ years of experience</span> driving growth and building B2C, SaaS, and platform products across car-sharing, agritech, and retail. I specialize in transforming complex business challenges into user-centric solutions.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                I have built and scaled products for customers across <span className="font-semibold text-purple-600">US, Latin America, Asia, and East Africa</span>. My expertise lies in platform strategy, data-informed decision making, and delivering measurable business impact through innovative product solutions.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Based in <span className="font-semibold text-emerald-600">Singapore</span>, I bring a global perspective to product development and have a proven track record of increasing conversion rates, driving revenue growth, and building scalable platforms.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-slate-200">
-                  <div className="text-2xl font-bold text-indigo-600">13+</div>
-                  <div className="text-sm text-slate-600">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm border border-slate-200">
-                  <div className="text-2xl font-bold text-purple-600">400K+</div>
-                  <div className="text-sm text-slate-600">Users Impacted</div>
+            {/* Left Column - Story */}
+            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}>
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  I'm a passionate <span className="font-semibold text-purple-600">Senior Software Engineer</span> with over 
+                  <span className="font-semibold text-purple-600"> 13 years</span> of experience building innovative digital solutions. 
+                  My journey spans from startup environments to large enterprises, where I've consistently delivered 
+                  high-quality software that drives business growth.
+                </p>
+                
+                <p>
+                  Throughout my career at companies like <span className="font-semibold">BlueSG, Yara International, Falabella India, 
+                  ThoughtWorks, and Cognizant</span>, I've specialized in full-stack development, cloud architecture, 
+                  and team leadership. I'm particularly passionate about creating scalable solutions using modern technologies 
+                  like React, Java, AWS, and microservices architecture.
+                </p>
+                
+                <p>
+                  What drives me is the opportunity to solve complex problems through elegant code and mentor the next 
+                  generation of developers. I believe in continuous learning and staying at the forefront of technology 
+                  trends to deliver exceptional results.
+                </p>
+
+                <div className="pt-4">
+                  <a 
+                    href="#contact" 
+                    className="btn-primary hover-lift inline-flex items-center space-x-2"
+                  >
+                    <span>Let's Connect</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-200 card-hover">
-              <h3 className="font-display text-2xl font-semibold text-slate-800 mb-6">Quick Facts</h3>
-              <div className="space-y-4">
-                <div className="flex items-center group">
-                  <div className="w-3 h-3 gradient-bg rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
-                  <span className="text-slate-700">13+ years in Product Management</span>
-                </div>
-                <div className="flex items-center group">
-                  <div className="w-3 h-3 gradient-bg rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
-                  <span className="text-slate-700">Ex-Thoughtworks Senior Consultant</span>
-                </div>
-                <div className="flex items-center group">
-                  <div className="w-3 h-3 gradient-bg rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
-                  <span className="text-slate-700">Global experience across 4+ regions</span>
-                </div>
-                <div className="flex items-center group">
-                  <div className="w-3 h-3 gradient-bg rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
-                  <span className="text-slate-700">MBA in Operations & Marketing</span>
-                </div>
-                <div className="flex items-center group">
-                  <div className="w-3 h-3 gradient-bg rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
-                  <span className="text-slate-700">Computer Science Graduate</span>
-                </div>
+
+            {/* Right Column - Highlights */}
+            <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+              <div className="grid gap-6">
+                {highlights.map((highlight, index) => (
+                  <div 
+                    key={index}
+                    className="card-modern p-6 rounded-2xl hover-lift"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                          <highlight.icon className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                          {highlight.title}
+                        </h3>
+                        <p className="text-gray-600">
+                          {highlight.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              
-              <div className="mt-8 pt-6 border-t border-slate-200">
-                <div className="text-center">
-                  <div className="text-3xl mb-2">🌏</div>
-                  <p className="text-slate-600 text-sm">Working globally from Singapore</p>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className={`mt-20 transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">13+</div>
+                  <div className="text-purple-100">Years of Experience</div>
+                </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+                  <div className="text-purple-100">Projects Completed</div>
+                </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">8</div>
+                  <div className="text-purple-100">Companies Served</div>
+                </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">25+</div>
+                  <div className="text-purple-100">Technologies Mastered</div>
                 </div>
               </div>
             </div>
@@ -71,4 +154,6 @@ export default function About() {
       </div>
     </section>
   );
-}
+};
+
+export default About;
