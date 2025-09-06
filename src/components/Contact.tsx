@@ -88,10 +88,10 @@ const Contact = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-blue-100">
               Let&apos;s <span className="gradient-text">Connect</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
               Ready to collaborate on your next project? I&apos;d love to hear from you. 
               Let&apos;s discuss how we can build something amazing together.
             </p>
@@ -103,7 +103,7 @@ const Contact = () => {
             <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <div className="space-y-8">
                 <div>
-                  <p className="text-gray-300 leading-relaxed mb-8">
+                  <p className="text-blue-200 leading-relaxed mb-8">
                     I&apos;m always open to discussing new product opportunities, interesting challenges, 
                     or just having a conversation about product management and growth strategies. 
                     Feel free to reach out through any of the channels below.
@@ -122,8 +122,8 @@ const Contact = () => {
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm text-gray-400">{info.label}</div>
-                        <div className="text-white font-medium">{info.value}</div>
+                        <div className="text-sm text-blue-300">{info.label}</div>
+                        <div className="text-blue-100 font-medium">{info.value}</div>
                       </div>
                     </a>
                   ))}
@@ -131,7 +131,7 @@ const Contact = () => {
 
                 {/* Social Links */}
                 <div className="pt-8">
-                  <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
+                  <h4 className="text-lg font-semibold text-blue-100 mb-4">Follow Me</h4>
                   <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
                       <a
@@ -139,7 +139,7 @@ const Contact = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`w-12 h-12 bg-white/5 backdrop-blur-sm rounded-xl flex items-center justify-center text-gray-400 hover:bg-white/10 transition-all duration-300 hover:scale-110 ${social.color}`}
+                        className={`w-12 h-12 bg-white/5 backdrop-blur-sm rounded-xl flex items-center justify-center text-blue-300 hover:bg-white/10 transition-all duration-300 hover:scale-110 ${social.color}`}
                       >
                         {getSocialIcon(social.icon)}
                       </a>
@@ -153,7 +153,7 @@ const Contact = () => {
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-green-400 font-medium">Available for New Projects</span>
                   </div>
-                  <p className="text-gray-300 text-sm mt-2">
+                  <p className="text-blue-200 text-sm mt-2">
                     Currently open to product management roles and consulting opportunities
                   </p>
                 </div>

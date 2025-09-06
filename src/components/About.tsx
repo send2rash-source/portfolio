@@ -53,7 +53,7 @@ const About = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-800">
               About <span className="gradient-text">Me</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full"></div>
@@ -132,19 +132,19 @@ const About = () => {
             <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-3xl p-8 md:p-12">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">13+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-100 mb-2">13+</div>
                   <div className="text-blue-100">Years of Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">400K+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-100 mb-2">400K+</div>
                   <div className="text-blue-100">Users Impacted</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">5</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-100 mb-2">5</div>
                   <div className="text-blue-100">Countries Served</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">30%</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-100 mb-2">30%</div>
                   <div className="text-blue-100">Conversion Growth</div>
                 </div>
               </div>

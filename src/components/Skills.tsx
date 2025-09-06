@@ -93,7 +93,7 @@ const Skills = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-800">
               Skills & <span className="gradient-text">Expertise</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -191,8 +191,8 @@ const Skills = () => {
           <div className={`mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12">
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-white mb-4">Core Competencies</h3>
-                <p className="text-gray-300 max-w-2xl mx-auto">
+                <h3 className="text-3xl font-bold text-blue-100 mb-4">Core Competencies</h3>
+                <p className="text-blue-200 max-w-2xl mx-auto">
                   Beyond product skills, I bring strong analytical thinking, user empathy, and business acumen
                 </p>
               </div>
@@ -204,8 +204,8 @@ const Skills = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Data-Informed</h4>
-                  <p className="text-gray-300">Making decisions based on metrics and user insights</p>
+                  <h4 className="text-xl font-semibold text-blue-100 mb-2">Data-Informed</h4>
+                  <p className="text-blue-200">Making decisions based on metrics and user insights</p>
                 </div>
                 
                 <div className="text-center">
@@ -214,8 +214,8 @@ const Skills = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">User-Centric</h4>
-                  <p className="text-gray-300">Focused on solving real user problems effectively</p>
+                  <h4 className="text-xl font-semibold text-blue-100 mb-2">User-Centric</h4>
+                  <p className="text-blue-200">Focused on solving real user problems effectively</p>
                 </div>
                 
                 <div className="text-center">
@@ -224,8 +224,8 @@ const Skills = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Growth-Oriented</h4>
-                  <p className="text-gray-300">Driving measurable business outcomes and revenue</p>
+                  <h4 className="text-xl font-semibold text-blue-100 mb-2">Growth-Oriented</h4>
+                  <p className="text-blue-200">Driving measurable business outcomes and revenue</p>
                 </div>
               </div>
             </div>

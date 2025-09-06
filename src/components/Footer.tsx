@@ -99,7 +99,7 @@ const Footer = () => {
               <h3 className="text-3xl font-display font-bold gradient-text mb-4">
                 Rashmi Singh
               </h3>
-              <p className="text-gray-300 leading-relaxed max-w-md">
+              <p className="text-gray-200 leading-relaxed max-w-md">
                 Senior Product Manager with 13+ years of experience driving growth 
                 and building B2C, SaaS, and platform products across multiple industries. 
                 Passionate about user-centric problem-solving and measurable business impact.
@@ -116,7 +116,7 @@ const Footer = () => {
                     href={social.href}
                     target={social.href.startsWith('http') ? '_blank' : '_self'}
                     rel={social.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                    className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-300 hover:text-blue-200 transition-all duration-300 hover:scale-110"
                     title={social.name}
                   >
                     {getSocialIcon(social.icon)}
@@ -135,7 +135,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                    className="text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block"
+                    className="text-gray-300 hover:text-blue-200 hover:translate-x-1 transition-all duration-300 inline-block"
                   >
                     {link.name}
                   </a>
@@ -147,27 +147,27 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Get In Touch</h4>
-            <div className="space-y-4 text-gray-300">
+            <div className="space-y-4 text-gray-200">
               <div>
-                <div className="text-sm text-gray-400 mb-1">Email</div>
+                <div className="text-sm text-gray-300 mb-1">Email</div>
                 <a 
                   href="mailto:singh.rashmi2509@gmail.com" 
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-blue-200 transition-colors duration-300"
                 >
                   singh.rashmi2509@gmail.com
                 </a>
               </div>
               <div>
-                <div className="text-sm text-gray-400 mb-1">Phone</div>
+                <div className="text-sm text-gray-300 mb-1">Phone</div>
                 <a 
                   href="tel:+6584244227" 
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-blue-200 transition-colors duration-300"
                 >
                   +65 8424 4227
                 </a>
               </div>
               <div>
-                <div className="text-sm text-gray-400 mb-1">Location</div>
+                <div className="text-sm text-gray-300 mb-1">Location</div>
                 <span>Singapore</span>
               </div>
             </div>
@@ -178,7 +178,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
-            <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+            <div className="flex items-center space-x-2 text-gray-300 mb-4 md:mb-0">
               <span>© {currentYear} Rashmi Singh. Made with</span>
               <HeartIcon className="w-4 h-4 text-red-500" />
               <span>and lots of ☕</span>
@@ -187,7 +187,7 @@ const Footer = () => {
             {/* Back to Top */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-gray-300 hover:text-white transition-all duration-300 group"
+              className="flex items-center space-x-2 text-gray-300 hover:text-blue-200 transition-all duration-300 group"
             >
               <span>Back to Top</span>
               <ArrowUpIcon className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
@@ -197,7 +197,7 @@ const Footer = () => {
         
         {/* Status Indicator */}
         <div className="absolute bottom-4 right-6 hidden lg:block">
-          <div className="flex items-center space-x-2 text-xs text-gray-400">
+          <div className="flex items-center space-x-2 text-xs text-gray-300">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span>Available for opportunities</span>
           </div>
