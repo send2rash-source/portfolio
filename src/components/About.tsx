@@ -19,7 +19,7 @@ const About = () => {
           <p className="text-lg text-gray-600 mb-6">
             I am a Senior Product Manager with over 13 years of experience in building and scaling 
             digital products across diverse industries. My expertise spans from early-stage startups 
-            to established enterprises, where I&apos;ve consistently delivered products that drive user 
+            to established enterprises, where I have consistently delivered products that drive user 
             engagement and business growth.
           </p>
           

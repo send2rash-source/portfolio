@@ -12,8 +12,8 @@ const Contact = () => {
           </h2>
           
           <p className="text-lg text-gray-600 mb-12 text-center">
-            I&apos;m open to discussing new opportunities and interesting projects. 
-            Feel free to reach out if you&apos;d like to connect.
+            I am open to discussing new opportunities and interesting projects. 
+            Feel free to reach out if you would like to connect.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
