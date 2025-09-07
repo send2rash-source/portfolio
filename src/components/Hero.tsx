@@ -1,7 +1,6 @@
 'use client';
 
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -47,11 +46,9 @@ const Hero = () => {
           
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <Image 
+              <img 
                 src="/img.png" 
                 alt="Rashmi Singh" 
-                width={320}
-                height={320}
                 className="w-80 h-80 object-cover rounded-2xl shadow-lg"
               />
             </div>
