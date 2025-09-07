@@ -1,94 +1,58 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import { AcademicCapIcon, CalendarIcon, MapPinIcon } from '@heroicons/react/24/outline';
-
 const Education = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   const education = [
     {
-      degree: "PGDM (MBA)",
-      field: "Marketing & Operations",
-      institution: "SDMIMD Mysore",
-      location: "Mysore, India",
-      period: "2010 - 2012"
+      degree: 'PGDM (MBA)',
+      field: 'Marketing & Operations',
+      institution: 'SDMIMD Mysore',
+      year: '2010 - 2012'
     },
     {
-      degree: "B.Tech",
-      field: "Computer Science & Engineering", 
-      institution: "ICFAI University, Dehradun",
-      location: "Dehradun, India",
-      period: "2006 - 2010"
+      degree: 'B.Tech',
+      field: 'Computer Science & Engineering',
+      institution: 'ICFAI University, Dehradun',
+      year: '2006 - 2010'
     }
   ];
 
+  const certifications = [
+    'Product Management Certificate',
+    'Data Analytics Certificate',
+    'Agile & Scrum Certification'
+  ];
+
   return (
-    <section id="education" ref={sectionRef} className="section-padding bg-gradient-to-br from-blue-50 to-teal-50">
+    <section id="education" className="section-padding bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gray-800">
-              <span className="gradient-text">Education</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-500 mx-auto rounded-full"></div>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          Education & Certifications
+        </h2>
+        
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">Education</h3>
+            <div className="space-y-6">
+              {education.map((edu, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
+                  <h4 className="text-lg font-semibold text-gray-900">{edu.degree}</h4>
+                  <p className="text-blue-600 font-medium">{edu.field}</p>
+                  <p className="text-gray-700">{edu.institution}</p>
+                  <p className="text-sm text-gray-500">{edu.year}</p>
+                </div>
+              ))}
+            </div>
           </div>
-
-          {/* Education Cards */}
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-            {education.map((edu, index) => (
-              <div
-                key={index}
-                className={`card-modern p-8 rounded-2xl hover-lift transition-all duration-500 ${
-                  isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
-              >
-                {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                  <AcademicCapIcon className="w-8 h-8 text-white" />
+          
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">Certifications</h3>
+            <div className="space-y-3">
+              {certifications.map((cert, index) => (
+                <div key={index} className="bg-white p-4 rounded-lg border border-gray-200">
+                  <p className="text-gray-700">{cert}</p>
                 </div>
-
-                {/* Degree Information */}
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">{edu.degree}</h3>
-                <p className="text-lg text-blue-600 font-medium mb-4">{edu.field}</p>
-                
-                {/* Institution Details */}
-                <div className="space-y-2 text-gray-600">
-                  <div className="flex items-center space-x-2">
-                    <AcademicCapIcon className="w-4 h-4" />
-                    <span className="font-medium">{edu.institution}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPinIcon className="w-4 h-4" />
-                    <span>{edu.location}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>{edu.period}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
